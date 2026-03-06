@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - NOCTERA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 120px;
+            align-items: center;
+        }
+
+        .product-detail:nth-child(even) {
+            direction: rtl;
+        }
+
+        .product-detail:nth-child(even)>* {
+            direction: ltr;
+        }
+
+        .product-visual {
+            background-color: var(--color-sub);
+            aspect-ratio: 4/5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .product-subtitle {
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-family: var(--font-heading);
+            font-style: italic;
+        }
+
+        .product-desc {
+            color: var(--color-text-muted);
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+
+            .product-detail,
+            .product-detail:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">NOCTERA</a></div>
+        <nav>
+            <ul>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="collection.html" class="active">Collection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="fade-in">Collection</h1>
+            <p class="fade-in"
+                style="transition-delay: 0.2s; color: var(--color-text-muted); margin-top: 20px; font-family: var(--font-heading); font-style: italic;">
+                夜の香りを纏う</p>
+        </section>
+
+        <section class="container" style="padding: 100px 0;">
+            <div id="void" class="product-detail fade-in">
+                <div class="product-visual">
+                    <img src="images/void.png" alt="VOID 香水ボトル">
+                </div>
+                <div class="product-info">
+                    <h2>VOID</h2>
+                    <div class="product-subtitle">静寂の夜</div>
+                    <p class="product-desc">
+                        深い夜の静寂を表現した香り。ウッディでスモーキーなノートが、心を落ち着かせ、自分自身と向き合う時間を与えてくれます。余計なものを削ぎ落とした、ミニマルで研ぎ澄まされたフレグランス。</p>
+                    <div class="price">¥18,000</div>
+                    <a href="#" class="submit-btn" onclick="event.preventDefault();">Add to Cart</a>
+                </div>
+            </div>
+
+            <div id="lumen" class="product-detail fade-in">
+                <div class="product-visual">
+                    <img src="images/lumen.png" alt="LUMEN 香水ボトル">
+                </div>
+                <div class="product-info">
+                    <h2>LUMEN</h2>
+                    <div class="product-subtitle">月明かりの香り</div>
+                    <p class="product-desc">
+                        月明かりの柔らかな光をイメージした香り。ホワイトフローラルとムスクが繊細に絡み合い、エレガントで透明感のあるオーラを放ちます。優しく包み込まれるような心地よさ。</p>
+                    <div class="price">¥18,000</div>
+                    <a href="#" class="submit-btn" onclick="event.preventDefault();">Add to Cart</a>
+                </div>
+            </div>
+
+            <div id="eclipse" class="product-detail fade-in">
+                <div class="product-visual">
+                    <img src="images/eclipse.png" alt="ECLIPSE 香水ボトル">
+                </div>
+                <div class="product-info">
+                    <h2>ECLIPSE</h2>
+                    <div class="product-subtitle">神秘的な夜</div>
+                    <p class="product-desc">
+                        神秘的な夜を表現した香り。スパイシーでオリエンタルな香調が、ドラマチックでミステリアスな魅力を引き立てます。力強く、それでいて官能的な余韻を残す大人のための香り。</p>
+                    <div class="price">¥20,000</div>
+                    <a href="#" class="submit-btn" onclick="event.preventDefault();">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">NOCTERA</div>
+        <div class="footer-links">
+            <a href="brand.html">Brand</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 NOCTERA. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
